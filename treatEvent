@@ -1,4 +1,19 @@
-   func treatEvent(event : String) -> (num: String, status: String) {
+   open class Model {
+
+    var currentNumberStr = "0"
+
+    var firstNumber = 0.0
+
+    var secondNumber = 0.0
+
+    var operation = ""
+
+    var state = "firstNumberState"
+
+    var negation = false
+
+        
+       func treatEvent(event : String) -> (num: String, status: String) {
         var statusStr = ""
         switch state{
         case "firstNumberState":
@@ -84,3 +99,4 @@
         }
         return (currentNumberStr,statusStr)
     }
+}
